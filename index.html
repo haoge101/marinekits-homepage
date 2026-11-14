@@ -152,6 +152,9 @@
     .dl-row .links a { display: inline-flex; flex-direction: column; align-items: flex-start; text-decoration: none; border: 1px solid var(--primary); color: var(--primary); background: #fff; border-radius: 8px; padding: 6px 12px; font-weight: 600; font-size: .9rem; line-height: 1.3; }
     .dl-row .links a:hover { background: var(--primary); color: #fff; }
     .dl-row .links a small { font-feature-settings: "calt" 0, "liga" 0; font-variant-ligatures: none; font-weight: 500; font-size: .78rem; opacity: .85; }
+    .copy-tip { margin: -8px auto 18px; max-width: 620px; font-size: .88rem; color: var(--primary); background: #eaf3fb; border-radius: 8px; padding: 8px 12px; }
+    .toast { position: fixed; left: 50%; bottom: 32px; transform: translateX(-50%) translateY(20px); background: #1b2236; color: #fff; padding: 12px 20px; border-radius: 10px; font-size: .95rem; box-shadow: 0 10px 30px rgba(0,0,0,.35); opacity: 0; pointer-events: none; transition: opacity .25s, transform .25s; z-index: 99; max-width: 90vw; text-align: center; }
+    .toast.show { opacity: 1; transform: translateX(-50%); }
     @media (max-width: 720px) { .dl-groups { grid-template-columns: 1fr; } }
     .dl { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 
@@ -292,16 +295,16 @@
       <div class="steps" style="margin-bottom:36px">
         <div class="step"><h3 class="i18n" data-en="Get a licence code" data-zh="获取授权码">Get a licence code</h3><p class="i18n" data-en="Buy a code from our card shop (¥16, valid for 1 year). It is delivered instantly after payment." data-zh="在发卡网购买授权码（¥16，有效期 1 年），付款后自动发货。">Buy a code from our card shop. It is delivered instantly after payment.</p></div>
         <div class="step"><h3 class="i18n" data-en="Install the app" data-zh="安装软件">Install the app</h3><p class="i18n" data-en="Download the Windows installer or the Android app below." data-zh="在下面下载 Windows 安装包或安卓应用。">Download the Windows installer or the Android app below.</p></div>
-        <div class="step"><h3 class="i18n" data-en="Activate once online" data-zh="联网激活一次">Activate once online</h3><p class="i18n" data-en="Enter the code while you have a connection. After that, most tools work offline." data-zh="有网络时输入授权码激活，之后大部分功能离线可用。">Enter the code while you have a connection. After that, most tools work offline.</p></div>
+        <div class="step"><h3 class="i18n" data-en="Activate once online" data-zh="联网激活一次">Activate once online</h3><p class="i18n" data-en="Enter the code while you have a connection. After that, most tools work offline. One code, one device." data-zh="有网络时输入授权码激活，之后大部分功能离线可用。一码一设备。">Enter the code while you have a connection. After that, most tools work offline.</p></div>
       </div>
 
       <div class="get-card">
         <h3 class="i18n" data-en="Licence code" data-zh="授权码">Licence code</h3>
         <div class="price">¥16<small class="i18n" data-en="· 1 year from activation" data-zh="· 自激活之日起 1 年">· 1 year from activation</small></div>
-        <p class="note i18n" data-en="One code unlocks every tool, on Windows and Android." data-zh="一个授权码解锁全部功能，Windows 和安卓通用。">One code unlocks every tool, on Windows and Android.</p>
+        <p class="note i18n" data-en="One code unlocks every tool on one device. Need it on another device? Buy another code." data-zh="一个授权码仅可激活一台设备，解锁全部功能。需要在其他设备使用，请另购授权码。">One code unlocks every tool on one device. Need it on another device? Buy another code.</p>
         <ul>
           <li class="i18n" data-en="All tools included, nothing locked" data-zh="全部功能，没有锁定的部分">All tools included, nothing locked</li>
-          <li class="i18n" data-en="Windows and Android" data-zh="Windows 和安卓">Windows and Android</li>
+          <li class="i18n" data-en="Each code activates one device only" data-zh="每个授权码只能激活一台设备">Each code activates one device only</li>
           <li class="i18n" data-en="Valid for 1 year, counted from the day you activate it" data-zh="有效期 1 年，从激活之日起算">Valid for 1 year, counted from the day you activate it</li>
           <li class="i18n" data-en="Instant delivery after payment" data-zh="付款后自动发货">Instant delivery after payment</li>
         </ul>
@@ -312,21 +315,22 @@
         <hr />
         <h3 class="i18n" data-en="Download" data-zh="下载软件">Download</h3>
         <p class="note i18n" data-en="Pick the route that is fastest where you are. The files are identical." data-zh="选择你所在地区更快的下载线路，文件内容完全一致。">Pick the route that is fastest where you are. The files are identical.</p>
+        <p class="copy-tip i18n" data-en="💡 Clicking a mainland link copies its password automatically. Just paste it (Ctrl+V) on the download page." data-zh="💡 点击国内下载链接时会自动复制提取码/密码，到下载页直接粘贴（Ctrl+V）即可，无需手输。">💡 Clicking a mainland link copies its password automatically. Just paste it (Ctrl+V) on the download page.</p>
         <div class="dl-groups">
           <div class="dl-group">
             <h4 class="i18n" data-en="Mainland China" data-zh="国内下载">Mainland China</h4>
             <div class="dl-row">
               <span class="lbl i18n" data-en="Windows installer (v1.0.2)" data-zh="Windows 安装包（v1.0.2）">Windows installer (v1.0.2)</span>
               <div class="links">
-                <a href="https://115cdn.com/s/swlzom23fnd?password=v0d5" target="_blank" rel="noopener">115<small class="i18n" data-en="Code: v0d5" data-zh="访问码：v0d5">Code: v0d5</small></a>
-                <a href="https://wwbdt.lanzoup.com/i3HR24fylw2j" target="_blank" rel="noopener">Lanzou<small class="i18n" data-en="Password: 9x87" data-zh="密码：9x87">Password: 9x87</small></a>
+                <a href="https://115cdn.com/s/swlzom23fnd?password=v0d5" data-pw="v0d5" target="_blank" rel="noopener">115<small class="i18n" data-en="Code: v0d5" data-zh="访问码：v0d5">Code: v0d5</small></a>
+                <a href="https://wwbdt.lanzoup.com/i3HR24fylw2j" data-pw="9x87" target="_blank" rel="noopener">Lanzou<small class="i18n" data-en="Password: 9x87" data-zh="密码：9x87">Password: 9x87</small></a>
               </div>
             </div>
             <div class="dl-row">
               <span class="lbl i18n" data-en="Android app (APK)" data-zh="安卓应用（APK）">Android app (APK)</span>
               <div class="links">
-                <a href="https://115cdn.com/s/swlzomu3fnd?password=ke76" target="_blank" rel="noopener">115<small class="i18n" data-en="Code: ke76" data-zh="访问码：ke76">Code: ke76</small></a>
-                <a href="https://wwbdt.lanzoup.com/iEixU4fylvfg" target="_blank" rel="noopener">Lanzou<small class="i18n" data-en="Password: 72i1" data-zh="密码：72i1">Password: 72i1</small></a>
+                <a href="https://115cdn.com/s/swlzomu3fnd?password=ke76" data-pw="ke76" target="_blank" rel="noopener">115<small class="i18n" data-en="Code: ke76" data-zh="访问码：ke76">Code: ke76</small></a>
+                <a href="https://wwbdt.lanzoup.com/iEixU4fylvfg" data-pw="72i1" target="_blank" rel="noopener">Lanzou<small class="i18n" data-en="Password: 72i1" data-zh="密码：72i1">Password: 72i1</small></a>
               </div>
             </div>
           </div>
@@ -399,6 +403,8 @@
     <p class="i18n" data-en="Typhoon data: Japan Meteorological Agency, processed by this app and not provided or endorsed by JMA. Magnetic model: WMM2025 (NOAA NCEI / BGS). Celestial positions: astronomy-engine. Base map: Natural Earth. Port routes: searoute-py (Apache-2.0)." data-zh="台风数据：出典：気象庁ホームページ，经本软件加工，非气象厅提供或认可。磁差模型：WMM2025（NOAA NCEI / BGS）。天体位置：astronomy-engine。底图：Natural Earth。港口航线：searoute-py（Apache-2.0）。">Typhoon data: Japan Meteorological Agency, processed by this app and not provided or endorsed by JMA. Magnetic model: WMM2025 (NOAA NCEI / BGS). Celestial positions: astronomy-engine. Base map: Natural Earth. Port routes: searoute-py (Apache-2.0).</p>
   </footer>
 
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       var $ = function (s) { return document.querySelector(s); };
@@ -409,6 +415,37 @@
         draft: ''    // your Ship Draft Survey App site
       };
       if (LINKS.draft) { var d = $('#draft-link'); d.href = LINKS.draft; d.target = '_blank'; d.rel = 'noopener'; }
+
+      /* ---- copy password on click ---- */
+      var toast = $('#toast'), tt;
+      function showToast(msg) {
+        toast.textContent = msg; toast.classList.add('show');
+        clearTimeout(tt); tt = setTimeout(function () { toast.classList.remove('show'); }, 5000);
+      }
+      function copyText(t) {
+        if (navigator.clipboard && window.isSecureContext) {
+          return navigator.clipboard.writeText(t);
+        }
+        return new Promise(function (ok, no) {
+          try {
+            var ta = document.createElement('textarea');
+            ta.value = t; ta.setAttribute('readonly', ''); ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0';
+            document.body.appendChild(ta); ta.select();
+            var r = document.execCommand('copy'); document.body.removeChild(ta);
+            r ? ok() : no();
+          } catch (e) { no(e); }
+        });
+      }
+      document.querySelectorAll('a[data-pw]').forEach(function (a) {
+        a.addEventListener('click', function () {
+          var pw = a.getAttribute('data-pw');
+          copyText(pw).then(function () {
+            showToast(lang === 'zh' ? '已复制密码：' + pw + '，到下载页粘贴即可' : 'Password copied: ' + pw + ' — paste it on the download page');
+          }, function () {
+            showToast(lang === 'zh' ? '请手动输入密码：' + pw : 'Please enter the password manually: ' + pw);
+          });
+        });
+      });
 
       /* ---- tool showcase content ---- */
       var MODULES = [
