@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Marine Kits — Free Tools for Mariners</title>
-  <meta name="description" content="Marine Kits: ETA, routes, typhoon, compass error, port-to-port distances and Notices to Mariners in one free app for Windows and Android. Works offline." />
-  <meta property="og:title" content="Marine Kits — Free Tools for Mariners" />
-  <meta property="og:description" content="ETA, routes, typhoon, compass error, port distances and Notices to Mariners in one free app." />
+  <title>Marine Kits — Everyday Tools for Mariners</title>
+  <meta name="description" content="Marine Kits: ETA, routes, typhoon, compass error, port-to-port distances and Notices to Mariners in one app for Windows and Android. Works offline." />
+  <meta property="og:title" content="Marine Kits — Everyday Tools for Mariners" />
+  <meta property="og:description" content="ETA, routes, typhoon, compass error, port distances and Notices to Mariners in one app." />
   <meta property="og:image" content="images/eta.jpg" />
   <link rel="icon" href="images/icon.png" />
   <style>
@@ -83,7 +83,7 @@
     .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
     .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 44px; padding: 0; list-style: none; }
     .chips li { border: 1px solid #2e3f66; color: #b7c6e0; border-radius: 999px; padding: 4px 12px; font-size: .85rem; }
-    .chips li.free { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+    .chips li.hl { border-color: var(--accent); color: var(--accent); font-weight: 700; }
 
     .window {
       background: var(--navy-2); border: 1px solid var(--line); border-radius: 12px 12px 0 0;
@@ -130,16 +130,29 @@
     .step h3 { margin: 0 0 6px; color: var(--navy); font-size: 1.1rem; }
     .step p { margin: 0; color: var(--muted); font-size: .95rem; }
 
-    /* free licence */
-    .free-card {
-      max-width: 760px; margin: 0 auto; background: var(--card); border: 2px solid var(--primary);
+    /* licence & downloads */
+    .get-card {
+      max-width: 860px; margin: 0 auto; background: var(--card); border: 2px solid var(--primary);
       border-radius: 18px; padding: 34px 28px; text-align: center; box-shadow: 0 10px 30px rgba(15, 76, 129, .12);
     }
-    .free-card .price { font-size: 3rem; font-weight: 800; color: var(--primary); line-height: 1; }
-    .free-card .price small { font-size: 1rem; font-weight: 600; color: var(--muted); margin-left: 6px; }
-    .free-card ul { list-style: none; padding: 0; margin: 20px auto 24px; display: inline-block; text-align: left; color: var(--text); }
-    .free-card li::before { content: "✓"; color: #1f9d55; font-weight: 700; margin-right: 8px; }
-    .free-card li { margin: 6px 0; }
+    .get-card .price { font-size: 2.6rem; font-weight: 800; color: var(--primary); line-height: 1.2; margin-bottom: 6px; }
+    .get-card .price small { font-size: 1rem; font-weight: 600; color: var(--muted); margin-left: 6px; }
+    .get-card h3 { margin: 0 0 6px; color: var(--navy); font-size: 1.3rem; }
+    .get-card p.note { margin: 0 auto 20px; color: var(--muted); max-width: 560px; }
+    .get-card ul { list-style: none; padding: 0; margin: 0 auto 24px; display: inline-block; text-align: left; color: var(--text); }
+    .get-card li::before { content: "✓"; color: #1f9d55; font-weight: 700; margin-right: 8px; }
+    .get-card li { margin: 6px 0; }
+    .get-card hr { border: 0; border-top: 1px solid var(--line); margin: 28px 0 24px; }
+    .dl-groups { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: left; }
+    .dl-group { border: 1px solid var(--line); border-radius: 12px; padding: 18px 18px 14px; background: #f7f9fc; }
+    .dl-group h4 { margin: 0 0 12px; color: var(--navy); font-size: 1rem; }
+    .dl-row { margin: 0 0 12px; }
+    .dl-row .lbl { display: block; font-size: .85rem; font-weight: 700; color: var(--muted); margin-bottom: 6px; }
+    .dl-row .links { display: flex; flex-wrap: wrap; gap: 8px; }
+    .dl-row .links a { display: inline-flex; flex-direction: column; align-items: flex-start; text-decoration: none; border: 1px solid var(--primary); color: var(--primary); background: #fff; border-radius: 8px; padding: 6px 12px; font-weight: 600; font-size: .9rem; line-height: 1.3; }
+    .dl-row .links a:hover { background: var(--primary); color: #fff; }
+    .dl-row .links a small { font-feature-settings: "calt" 0, "liga" 0; font-variant-ligatures: none; font-weight: 500; font-size: .78rem; opacity: .85; }
+    @media (max-width: 720px) { .dl-groups { grid-template-columns: 1fr; } }
     .dl { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 
     /* draft survey promo */
@@ -190,7 +203,7 @@
     <div class="wrap">
       <a class="brand" href="#top"><img src="images/icon.png" alt="" /> Marine Kits</a>
       <a class="link hide-sm i18n" href="#modules" data-en="Tools" data-zh="功能">Tools</a>
-      <a class="link hide-sm i18n" href="#get" data-en="Get it free" data-zh="免费获取">Get it free</a>
+      <a class="link hide-sm i18n" href="#get" data-en="Get it" data-zh="获取软件">Get it</a>
       <a class="link promo i18n" href="#draft" data-en="Draft Survey App" data-zh="水尺计量软件">Draft Survey App</a>
       <select id="lang-select" aria-label="Language">
         <option value="en">EN</option>
@@ -201,9 +214,9 @@
 
   <header class="hero" id="top">
     <div class="wrap">
-      <h1 class="i18n" data-en="The everyday tools a mariner needs — in one free app."
-        data-zh="船上常用的航海小工具——一个免费软件全搞定。">
-        The everyday tools a mariner needs — in one free app.
+      <h1 class="i18n" data-en="The everyday tools a mariner needs — in one app."
+        data-zh="船上常用的航海小工具——一个软件全搞定。">
+        The everyday tools a mariner needs — in one app.
       </h1>
       <p class="sub i18n"
         data-en="ETA, routes, typhoon tracks, compass error, port-to-port distances and Notices to Mariners. For Windows and Android, with day and night themes."
@@ -211,11 +224,11 @@
         ETA, routes, typhoon tracks, compass error, port-to-port distances and Notices to Mariners. For Windows and Android, with day and night themes.
       </p>
       <div class="cta">
-        <a class="btn btn-primary i18n" href="#get" data-en="Get it free" data-zh="免费获取">Get it free</a>
+        <a class="btn btn-primary i18n" href="#get" data-en="Get it now" data-zh="立即获取">Get it now</a>
         <a class="btn btn-ghost i18n" href="#modules" data-en="See the tools" data-zh="看看有什么功能">See the tools</a>
       </div>
       <ul class="chips">
-        <li class="free i18n" data-en="Free licence" data-zh="免费授权">Free licence</li>
+        <li class="hl i18n" data-en="All tools included" data-zh="全部功能无锁定">All tools included</li>
         <li class="i18n" data-en="Windows + Android" data-zh="Windows + 安卓">Windows + Android</li>
         <li class="i18n" data-en="Works offline at sea" data-zh="海上离线可用">Works offline at sea</li>
         <li class="i18n" data-en="English / 中文" data-zh="中文 / English">English / 中文</li>
@@ -271,29 +284,63 @@
   <section id="get" style="background:#e9eff7">
     <div class="wrap">
       <div class="head center">
-        <p class="eyebrow i18n" data-en="Free" data-zh="免费">Free</p>
-        <h2 class="i18n" data-en="Get Marine Kits for free" data-zh="免费获取 Marine Kits">Get Marine Kits for free</h2>
-        <p class="lead i18n" data-en="Marine Kits needs a licence code, but the code costs nothing." data-zh="软件需要授权码才能打开，但授权码是免费的。">Marine Kits needs a licence code, but the code costs nothing.</p>
+        <p class="eyebrow i18n" data-en="Get started" data-zh="开始使用">Get started</p>
+        <h2 class="i18n" data-en="Get Marine Kits" data-zh="获取 Marine Kits">Get Marine Kits</h2>
+        <p class="lead i18n" data-en="Marine Kits needs a licence code to open. Get one, install the app, and activate it once online." data-zh="软件需要授权码才能打开。获取授权码、安装软件、联网激活一次即可使用。">Marine Kits needs a licence code to open. Get one, install the app, and activate it once online.</p>
       </div>
 
       <div class="steps" style="margin-bottom:36px">
-        <div class="step"><h3 class="i18n" data-en="Ask for a free code" data-zh="索取免费授权码">Ask for a free code</h3><p class="i18n" data-en="Message me on WeChat or send an email. Each code is valid for 180 days." data-zh="微信或邮件联系我即可，每个授权码有效期 180 天。">Message me on WeChat or send an email. Each code is valid for 180 days.</p></div>
+        <div class="step"><h3 class="i18n" data-en="Get a licence code" data-zh="获取授权码">Get a licence code</h3><p class="i18n" data-en="Buy a code from our card shop (¥16, valid for 1 year). It is delivered instantly after payment." data-zh="在发卡网购买授权码（¥16，有效期 1 年），付款后自动发货。">Buy a code from our card shop. It is delivered instantly after payment.</p></div>
         <div class="step"><h3 class="i18n" data-en="Install the app" data-zh="安装软件">Install the app</h3><p class="i18n" data-en="Download the Windows installer or the Android app below." data-zh="在下面下载 Windows 安装包或安卓应用。">Download the Windows installer or the Android app below.</p></div>
         <div class="step"><h3 class="i18n" data-en="Activate once online" data-zh="联网激活一次">Activate once online</h3><p class="i18n" data-en="Enter the code while you have a connection. After that, most tools work offline." data-zh="有网络时输入授权码激活，之后大部分功能离线可用。">Enter the code while you have a connection. After that, most tools work offline.</p></div>
       </div>
 
-      <div class="free-card">
-        <div class="price">$0<small class="i18n" data-en="· 180 days per code" data-zh="· 每个授权码 180 天">· 180 days per code</small></div>
-        <br />
+      <div class="get-card">
+        <h3 class="i18n" data-en="Licence code" data-zh="授权码">Licence code</h3>
+        <div class="price">¥16<small class="i18n" data-en="· 1 year from activation" data-zh="· 自激活之日起 1 年">· 1 year from activation</small></div>
+        <p class="note i18n" data-en="One code unlocks every tool, on Windows and Android." data-zh="一个授权码解锁全部功能，Windows 和安卓通用。">One code unlocks every tool, on Windows and Android.</p>
         <ul>
           <li class="i18n" data-en="All tools included, nothing locked" data-zh="全部功能，没有锁定的部分">All tools included, nothing locked</li>
           <li class="i18n" data-en="Windows and Android" data-zh="Windows 和安卓">Windows and Android</li>
-          <li class="i18n" data-en="Code expired? Just ask for a new one" data-zh="授权码到期？再联系我领取新的即可">Code expired? Just ask for a new one</li>
+          <li class="i18n" data-en="Valid for 1 year, counted from the day you activate it" data-zh="有效期 1 年，从激活之日起算">Valid for 1 year, counted from the day you activate it</li>
+          <li class="i18n" data-en="Instant delivery after payment" data-zh="付款后自动发货">Instant delivery after payment</li>
         </ul>
         <div class="dl">
-          <a class="btn btn-dark i18n" id="dl-win" href="#contact" data-en="Windows installer" data-zh="Windows 安装包">Windows installer</a>
-          <a class="btn btn-dark i18n" id="dl-apk" href="#contact" data-en="Android app (APK)" data-zh="安卓应用（APK）">Android app (APK)</a>
-          <a class="btn btn-primary i18n" href="#contact" data-en="Get my free code" data-zh="领取免费授权码">Get my free code</a>
+          <a class="btn btn-primary i18n" id="buy-link" href="https://www.houfaka.com/links/677C9FE5" target="_blank" rel="noopener" data-en="Buy a licence code" data-zh="购买授权码">Buy a licence code</a>
+        </div>
+
+        <hr />
+        <h3 class="i18n" data-en="Download" data-zh="下载软件">Download</h3>
+        <p class="note i18n" data-en="Pick the route that is fastest where you are. The files are identical." data-zh="选择你所在地区更快的下载线路，文件内容完全一致。">Pick the route that is fastest where you are. The files are identical.</p>
+        <div class="dl-groups">
+          <div class="dl-group">
+            <h4 class="i18n" data-en="Mainland China" data-zh="国内下载">Mainland China</h4>
+            <div class="dl-row">
+              <span class="lbl i18n" data-en="Windows installer (v1.0.2)" data-zh="Windows 安装包（v1.0.2）">Windows installer (v1.0.2)</span>
+              <div class="links">
+                <a href="https://115cdn.com/s/swlzom23fnd?password=v0d5" target="_blank" rel="noopener">115<small class="i18n" data-en="Code: v0d5" data-zh="访问码：v0d5">Code: v0d5</small></a>
+                <a href="https://wwbdt.lanzoup.com/i3HR24fylw2j" target="_blank" rel="noopener">Lanzou<small class="i18n" data-en="Password: 9x87" data-zh="密码：9x87">Password: 9x87</small></a>
+              </div>
+            </div>
+            <div class="dl-row">
+              <span class="lbl i18n" data-en="Android app (APK)" data-zh="安卓应用（APK）">Android app (APK)</span>
+              <div class="links">
+                <a href="https://115cdn.com/s/swlzomu3fnd?password=ke76" target="_blank" rel="noopener">115<small class="i18n" data-en="Code: ke76" data-zh="访问码：ke76">Code: ke76</small></a>
+                <a href="https://wwbdt.lanzoup.com/iEixU4fylvfg" target="_blank" rel="noopener">Lanzou<small class="i18n" data-en="Password: 72i1" data-zh="密码：72i1">Password: 72i1</small></a>
+              </div>
+            </div>
+          </div>
+          <div class="dl-group">
+            <h4 class="i18n" data-en="International (GitHub)" data-zh="海外下载（GitHub）">International (GitHub)</h4>
+            <div class="dl-row">
+              <span class="lbl i18n" data-en="Windows installer (v1.0.2)" data-zh="Windows 安装包（v1.0.2）">Windows installer (v1.0.2)</span>
+              <div class="links"><a id="dl-win" href="https://github.com/haoge101/marinekits-homepage/releases/download/v1.0.2/Marine.Kits_1.0.2_x64_en-US.zip" rel="noopener">GitHub<small>Marine.Kits_1.0.2_x64_en-US.zip</small></a></div>
+            </div>
+            <div class="dl-row">
+              <span class="lbl i18n" data-en="Android app (APK)" data-zh="安卓应用（APK）">Android app (APK)</span>
+              <div class="links"><a id="dl-apk" href="https://github.com/haoge101/marinekits-homepage/releases/download/v1.0.2/MarineKits-android.zip" rel="noopener">GitHub<small>MarineKits-android.zip</small></a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -330,7 +377,7 @@
     <div class="wrap">
       <div class="head center">
         <h2 class="i18n" data-en="Get in touch" data-zh="联系我们">Get in touch</h2>
-        <p class="lead i18n" data-en="For a free Marine Kits code, Draft Survey pricing or technical support" data-zh="索取 Marine Kits 免费授权码、了解水尺软件价格或技术支持，请联系">For a free Marine Kits code, Draft Survey pricing or technical support</p>
+        <p class="lead i18n" data-en="For licence code help, Draft Survey pricing or technical support" data-zh="授权码问题、水尺软件价格或技术支持，请联系">For licence code help, Draft Survey pricing or technical support</p>
       </div>
       <div class="contact">
         <div class="contact-card wechat-card">
@@ -340,7 +387,7 @@
         </div>
         <div class="contact-card">
           <h3 class="i18n" data-en="Email" data-zh="电子邮件">Email</h3>
-          <p><a id="mail" href="mailto:123@dingzihao.cn?subject=Marine%20Kits%20free%20licence%20code&body=Hello,%0AI%27d%20like%20a%20free%20licence%20code%20for%20Marine%20Kits.%0AThank%20you.">123@dingzihao.cn</a></p>
+          <p><a id="mail" href="mailto:123@dingzihao.cn?subject=Marine%20Kits%20support&body=Hello,%0A">123@dingzihao.cn</a></p>
         </div>
       </div>
     </div>
@@ -359,12 +406,8 @@
 
       /* ---- links: fill these in once the files are published; empty = button goes to the contact section ---- */
       var LINKS = {
-        win: '',     // Windows installer, e.g. a GitHub Releases URL
-        apk: '',     // Android APK
         draft: ''    // your Ship Draft Survey App site
       };
-      if (LINKS.win) $('#dl-win').href = LINKS.win;
-      if (LINKS.apk) $('#dl-apk').href = LINKS.apk;
       if (LINKS.draft) { var d = $('#draft-link'); d.href = LINKS.draft; d.target = '_blank'; d.rel = 'noopener'; }
 
       /* ---- tool showcase content ---- */
